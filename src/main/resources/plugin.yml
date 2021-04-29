@@ -1,0 +1,5 @@
+name: Whitebait
+version: @version@
+main: com.github.shur.whitebait.Whitebait
+api-version: 1.16
+authors: [ ShuR ]
