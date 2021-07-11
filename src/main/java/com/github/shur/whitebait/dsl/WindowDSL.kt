@@ -6,7 +6,6 @@ import com.github.shur.whitebait.event.OpenEvent
 import com.github.shur.whitebait.inventory.Window
 import com.github.shur.whitebait.inventory.WindowOption
 import org.bukkit.entity.Player
-import kotlin.properties.ReadOnlyProperty
 
 class WindowDSL(
     val player: Player,

@@ -19,6 +19,7 @@ class Icon {
     // basedItemは元となるアイテムであり、editItemはパラーメーター適応後に処理される
     var editItem: (ItemStack) -> Unit = {  }
 
+
     fun toItemStack(): ItemStack {
         val itemStack = basedItem ?: ItemStack(type)
 
@@ -32,7 +33,7 @@ class Icon {
                 meta.setCustomModelData(model)
             }
         }
-        editItem(itemStack)
+        itemStack.apply(editItem)
 
         return itemStack
     }
