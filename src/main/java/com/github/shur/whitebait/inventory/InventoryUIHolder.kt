@@ -14,8 +14,7 @@ class InventoryUIHolder(
         inventory.apply {
             (0 until inventory.size).forEach { index ->
                 val slot = window.slots.getOrDefault(index, window.defaultSlot)
-
-                setItem(index, slot.icon)
+                setItem(index, slot.icon.toItemStack())
             }
         }
 

@@ -1,15 +1,15 @@
 package com.github.shur.whitebait.dsl
 
 import com.github.shur.whitebait.event.ClickEvent
+import com.github.shur.whitebait.inventory.Icon
 import com.github.shur.whitebait.inventory.Slot
-import org.bukkit.inventory.ItemStack
 
 class SlotDSL {
 
     val slot = Slot()
 
 
-    var icon: ItemStack
+    var icon: Icon
         get() = slot.icon
         set(value) { slot.icon = value }
 
