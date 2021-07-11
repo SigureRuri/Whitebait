@@ -16,14 +16,9 @@ class Icon {
     var flags: MutableSet<ItemFlag> = mutableSetOf()
     var enchantments: MutableMap<Enchantment, Int> = mutableMapOf()
     var model: Int? = null
-    var editItem: ItemStack.() -> Unit = {  }
-
-    fun edit(block: ItemStack.() -> Unit) {
-        editItem = block
-    }
 
     fun toItemStack(): ItemStack {
-        val itemStack = (basedItem ?: ItemStack(type)).apply(editItem)
+        val itemStack = basedItem ?: ItemStack(type)
 
         itemStack.amount = amount
         if (itemStack.hasItemMeta()) {
