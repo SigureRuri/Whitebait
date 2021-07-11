@@ -16,6 +16,8 @@ class Icon {
     var flags: MutableSet<ItemFlag> = mutableSetOf()
     var enchantments: MutableMap<Enchantment, Int> = mutableMapOf()
     var model: Int? = null
+    // basedItemは元となるアイテムであり、editItemはパラーメーター適応後に処理される
+    var editItem: (ItemStack) -> Unit = {  }
 
     fun toItemStack(): ItemStack {
         val itemStack = basedItem ?: ItemStack(type)
@@ -30,6 +32,7 @@ class Icon {
                 meta.setCustomModelData(model)
             }
         }
+        editItem(itemStack)
 
         return itemStack
     }
