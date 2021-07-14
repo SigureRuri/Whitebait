@@ -43,6 +43,20 @@ class WindowDSL(
         window.slots[index] = slotDsl.slot
     }
 
+    fun slot(range: IntRange, block: SlotDSL.() -> Unit) {
+        range.forEach {
+            slot(it, block)
+        }
+    }
+
+    fun slot(vararg indexes: Int, block: SlotDSL.() -> Unit) {
+        indexes.forEach {
+            slot(it, block)
+        }
+    }
+
+    // TODO: Position2Iでslot指定できるようにしたい
+
     var title: String?
         get() = window.title
         set(value) { window.title = value }
