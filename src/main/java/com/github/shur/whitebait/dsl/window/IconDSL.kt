@@ -1,6 +1,6 @@
-package com.github.shur.whitebait.dsl
+package com.github.shur.whitebait.dsl.window
 
-import com.github.shur.whitebait.inventory.Icon
+import com.github.shur.whitebait.inventory.window.Icon
 import org.bukkit.Material
 import org.bukkit.enchantments.Enchantment
 import org.bukkit.inventory.ItemFlag

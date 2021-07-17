@@ -1,8 +1,9 @@
 package com.github.shur.whitebait.dsl
 
+import com.github.shur.whitebait.dsl.window.WindowDSL
 import com.github.shur.whitebait.inventory.InventoryUI
-import com.github.shur.whitebait.inventory.Window
-import com.github.shur.whitebait.inventory.WindowOption
+import com.github.shur.whitebait.inventory.window.Window
+import com.github.shur.whitebait.inventory.window.WindowOption
 import org.bukkit.entity.Player
 import kotlin.properties.ReadOnlyProperty
 

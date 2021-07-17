@@ -1,4 +1,4 @@
-package com.github.shur.whitebait.inventory
+package com.github.shur.whitebait.inventory.window
 
 import com.github.shur.whitebait.event.ClickEvent
 import com.github.shur.whitebait.event.CloseEvent

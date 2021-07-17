@@ -1,10 +1,10 @@
-package com.github.shur.whitebait.dsl
+package com.github.shur.whitebait.dsl.window
 
 import com.github.shur.whitebait.event.ClickEvent
 import com.github.shur.whitebait.event.CloseEvent
 import com.github.shur.whitebait.event.OpenEvent
-import com.github.shur.whitebait.inventory.Window
-import com.github.shur.whitebait.inventory.WindowOption
+import com.github.shur.whitebait.inventory.window.Window
+import com.github.shur.whitebait.inventory.window.WindowOption
 import org.bukkit.entity.Player
 
 class WindowDSL(

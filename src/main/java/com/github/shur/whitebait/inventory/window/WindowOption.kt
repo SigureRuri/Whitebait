@@ -1,4 +1,4 @@
-package com.github.shur.whitebait.inventory
+package com.github.shur.whitebait.inventory.window
 
 import org.bukkit.event.inventory.InventoryType
 

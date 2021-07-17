@@ -1,7 +1,7 @@
-package com.github.shur.whitebait.dsl
+package com.github.shur.whitebait.dsl.window
 
 import com.github.shur.whitebait.event.ClickEvent
-import com.github.shur.whitebait.inventory.Slot
+import com.github.shur.whitebait.inventory.window.Slot
 import org.bukkit.event.inventory.ClickType
 
 class SlotDSL {

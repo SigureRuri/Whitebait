@@ -1,5 +1,8 @@
 package com.github.shur.whitebait.inventory
 
+import com.github.shur.whitebait.inventory.window.SizedWindowOption
+import com.github.shur.whitebait.inventory.window.TypedWindowOption
+import com.github.shur.whitebait.inventory.window.Window
 import org.bukkit.Bukkit
 import org.bukkit.inventory.Inventory
 import org.bukkit.inventory.InventoryHolder

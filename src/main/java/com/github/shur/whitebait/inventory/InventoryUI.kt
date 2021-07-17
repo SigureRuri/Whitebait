@@ -1,6 +1,7 @@
 package com.github.shur.whitebait.inventory
 
 import com.github.shur.whitebait.Whitebait
+import com.github.shur.whitebait.inventory.window.Window
 import org.bukkit.Bukkit
 import org.bukkit.entity.Player
 
