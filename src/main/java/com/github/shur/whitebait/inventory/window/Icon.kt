@@ -38,7 +38,7 @@ class Icon(
     }
 
     fun toItemStack(): ItemStack {
-        val itemStack = basedItem ?: ItemStack(type)
+        val itemStack = basedItem?.clone() ?: ItemStack(type)
 
         itemStack.amount = amount
         itemStack.itemMeta = itemStack.itemMeta?.also { meta ->
