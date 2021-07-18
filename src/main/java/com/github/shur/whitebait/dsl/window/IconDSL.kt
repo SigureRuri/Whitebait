@@ -6,13 +6,11 @@ import org.bukkit.enchantments.Enchantment
 import org.bukkit.inventory.ItemFlag
 import org.bukkit.inventory.ItemStack
 
-class IconDSL {
+class IconDSL(
+    basedItem: ItemStack? = null
+) {
 
-    val icon = Icon()
-
-    var basedItem: ItemStack?
-        get() = icon.basedItem
-        set(value) { icon.basedItem = value }
+    val icon = Icon(basedItem)
 
     var type: Material
         get() = icon.type

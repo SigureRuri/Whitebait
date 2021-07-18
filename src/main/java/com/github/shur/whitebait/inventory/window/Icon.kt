@@ -5,9 +5,9 @@ import org.bukkit.enchantments.Enchantment
 import org.bukkit.inventory.ItemFlag
 import org.bukkit.inventory.ItemStack
 
-class Icon {
-
-    var basedItem: ItemStack? = null
+class Icon(
+    private val basedItem: ItemStack? = null
+) {
 
     var type: Material = Material.AIR
     var amount: Int = 1
@@ -20,6 +20,22 @@ class Icon {
     // basedItemは元となるアイテムであり、editItemはパラーメーター適応後に処理される
     var editItem: (ItemStack) -> Unit = { }
 
+
+    init {
+        if (basedItem != null) {
+            type = basedItem.type
+            amount = basedItem.amount
+
+            val itemMeta = basedItem.itemMeta
+            if (itemMeta != null) {
+                if (itemMeta.hasDisplayName()) name = itemMeta.displayName
+                if (itemMeta.hasLore()) lore = itemMeta.lore!!
+                if (itemMeta.itemFlags.isNotEmpty()) flags = itemMeta.itemFlags
+                if (itemMeta.hasEnchants()) enchantments = itemMeta.enchants
+                if (itemMeta.hasCustomModelData()) model = itemMeta.customModelData
+            }
+        }
+    }
 
     fun toItemStack(): ItemStack {
         val itemStack = basedItem ?: ItemStack(type)

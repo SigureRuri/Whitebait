@@ -3,13 +3,14 @@ package com.github.shur.whitebait.dsl.window
 import com.github.shur.whitebait.event.ClickEvent
 import com.github.shur.whitebait.inventory.window.Slot
 import org.bukkit.event.inventory.ClickType
+import org.bukkit.inventory.ItemStack
 
 class SlotDSL {
 
     val slot = Slot()
 
-    fun icon(block: IconDSL.() -> Unit) {
-        val iconDsl = IconDSL().apply(block)
+    fun icon(basedItem: ItemStack? = null, block: IconDSL.() -> Unit) {
+        val iconDsl = IconDSL(basedItem).apply(block)
         slot.icon = iconDsl.icon
     }
 
