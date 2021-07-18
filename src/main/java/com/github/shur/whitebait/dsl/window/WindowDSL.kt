@@ -15,6 +15,10 @@ class WindowDSL(
     val window = Window(option)
 
 
+    var title: String?
+        get() = window.title
+        set(value) { window.title = value }
+
     fun onOpen(block: OpenEvent.() -> Unit) {
         window.onOpen = { openEvent ->
             openEvent.apply(block)
@@ -56,9 +60,5 @@ class WindowDSL(
     }
 
     // TODO: Position2Iでslot指定できるようにしたい
-
-    var title: String?
-        get() = window.title
-        set(value) { window.title = value }
 
 }

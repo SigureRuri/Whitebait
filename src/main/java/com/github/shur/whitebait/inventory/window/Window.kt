@@ -8,13 +8,14 @@ class Window(
     val option: WindowOption
 ) {
 
+    var title: String? = null
+
     var onOpen: (OpenEvent) -> Unit = {}
     var onClose: (CloseEvent) -> Unit = {}
+
     var onClick: (ClickEvent) -> Unit = {}
-
     var defaultSlot = Slot()
-    val slots: MutableMap<Int, Slot> = hashMapOf()
 
-    var title: String? = null
+    val slots: MutableMap<Int, Slot> = hashMapOf()
 
 }
